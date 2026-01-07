@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Quiz Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+        <div class="container">
+            <div class="card start-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h1 class="main-title">MCQ Quiz Challenge</h1>
+                <p class="main-subtitle">Test your knowledge with multiple choice questions</p>
+
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <div class="info-value">10</div>
+                        <div class="info-label">Questions</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-value">5:00</div>
+                        <div class="info-label">Time Limit</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-value">Multiple</div>
+                        <div class="info-label">Choice</div>
+                    </div>
+                </div>
+
+                <button id="startBtn" class="start-btn">
+                    <i class="fas fa-play"></i>
+                    Start Quiz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="screen hidden">
+        <div class="container">
+            <div class="card quiz-card">
+                <div class="quiz-header">
+                    <div class="progress-wrapper">
+                        <div class="question-counter">
+                            Question <span id="currentQ">1</span> / <span id="totalQ">10</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="timer-wrapper">
+                        <i class="fas fa-clock"></i>
+                        <span id="timer">5:00</span>
+                    </div>
+                </div>
+
+                <div class="question-wrapper">
+                    <h2 id="question" class="question-text"></h2>
+                </div>
+
+                <div id="optionsContainer" class="options-container"></div>
+
+                <div class="quiz-footer">
+                    <div class="score-display">
+                        Score: <span id="currentScore">0</span>
+                    </div>
+
+                    <button id="submitBtn" class="submit-btn" disabled>
+                        Submit Answer
+                    </button>
+                </div>
+
+                <div id="feedbackMsg" class="feedback-msg hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="screen hidden">
+        <div class="container">
+            <div class="card results-card">
+                <div class="results-header">
+                    <div class="trophy-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2 class="results-title">Quiz Complete!</h2>
+                    <p class="results-subtitle">Here's how you performed</p>
+                </div>
+
+                <div class="results-stats">
+                    <div class="stat-item stat-score">
+                        <div class="stat-value" id="finalScore">0/10</div>
+                        <div class="stat-label">Correct Answers</div>
+                    </div>
+                    <div class="stat-item stat-percentage">
+                        <div class="stat-value" id="percentage">0%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat-item stat-time">
+                        <div class="stat-value" id="timeTaken">0:00</div>
+                        <div class="stat-label">Time Taken</div>
+                    </div>
+                </div>
+
+                <div class="review-section">
+                    <h3 class="review-title">Answer Review</h3>
+                    <div id="reviewContainer" class="review-container"></div>
+                </div>
+
+                <button id="restartBtn" class="restart-btn">
+                    <i class="fas fa-redo-alt"></i>
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
