@@ -19,8 +19,8 @@ An interactive, user-friendly quiz application that enables users to test their 
 
 ## Screenshots
 
-![Quizify Interface](<img width="999" height="763" alt="image" src="https://github.com/user-attachments/assets/9588cfe9-08f5-4f4b-b8d2-e49ae21f38e1" />
-)
+<img width="999" height="689" alt="image" src="https://github.com/user-attachments/assets/0e5bce3f-14a2-4b95-bdab-fb12f3a5fdc1" />
+
 
 ## Getting Started
 
